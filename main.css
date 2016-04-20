@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,600,700,800");
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+.hmd-book-wrapper {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: none;
+}
+.hmd-book-wrapper * {
+  box-sizing: border-box;
+}
+.hmd-book-wrapper .hmd-clearfix {
+  clear: both;
+}
+.hmd-book-wrapper .hmd-book-container {
+  max-width: 600px;
+  min-height: 130px;
+  width: 80%;
+  background-color: #FFF;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 3px;
+  position: relative;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang {
+  position: absolute;
+  height: 40px;
+  color: #FFF;
+  font-size: 0.8em;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 30px;
+  border-radius: 3px;
+  background-color: #1a1a1a;
+  top: -32px;
+  cursor: pointer;
+  left: 0px;
+  z-index: -1;
+  box-shadow: inset 0 -5px 10px -5px #333;
+  transition: all 0.5s ease-in-out;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang:hover {
+  background-color: #0F0F0F;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  display: none;
+  z-index: 20;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #FFF;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang-list ul li {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+.hmd-book-wrapper .hmd-book-container .hmd-lang-list ul li:hover {
+  color: white;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  top: -15px;
+  cursor: pointer;
+  right: -15px;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings {
+  border-bottom: 1px solid #f0f0f0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings {
+  height: 130px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  border-right: 1px solid #f0f0f0;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li:last-child {
+  border-right: none;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li:hover {
+  background-color: #fcfcfc;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-label {
+  height: 20px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+  font-size: 0.9em;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-text {
+  height: 70px;
+  line-height: 70px;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-sub {
+  height: 20px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-sub .hmd-add {
+  width: 50%;
+  float: left;
+  font-size: 0.8em;
+  transition: all 0.5s ease-in-out;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-sub .hmd-add:hover {
+  color: #27ae60;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-sub .hmd-emove {
+  width: 50%;
+  float: left;
+  font-size: 0.8em;
+  transition: all 0.5s ease-in-out;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-settings ul.hmd-settings li .hmd-sub .hmd-emove:hover {
+  color: #e74c3c;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms {
+  background-color: #fcfcfc;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section {
+  min-height: 50px;
+  width: 33.33%;
+  line-height: 50px;
+  float: left;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section select {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background-color: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section select:focus {
+  outline: 0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section.name {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  border-right: 1px solid #f0f0f0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section.adults {
+  height: 50px;
+  border-right: 1px solid #f0f0f0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-section.childs {
+  height: 50px;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-childs-ages {
+  height: 50px;
+  float: left;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  line-height: 50px;
+  display: none;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-childs-ages .hmd-child-age {
+  width: 25%;
+  float: left;
+  height: 50px;
+  border-right: 1px solid #f0f0f0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-childs-ages .hmd-child-age select {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background-color: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-book-rooms .hmd-room .hmd-room-childs-ages .hmd-child-age select:focus {
+  outline: 0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-promocode {
+  height: 50px;
+  border-top: 1px solid #f0f0f0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-promocode input {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  font-size: 1em;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.6);
+}
+.hmd-book-wrapper .hmd-book-container .hmd-promocode input:focus {
+  outline: 0;
+}
+.hmd-book-wrapper .hmd-book-container .hmd-booknow {
+  height: 50px;
+  line-height: 50px;
+  background-color: #302c3b;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid #1b1822;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.hmd-book-wrapper .credits {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.hmd-book-wrapper .hmd-datepicker {
+  background-color: #f0f0f0;
+  font-size: 1em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-header {
+  background-color: #FFF;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-header .ui-datepicker-prev, .hmd-book-wrapper .hmd-datepicker .ui-datepicker-header .ui-datepicker-next {
+  width: 20%;
+  height: 50px;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-header .ui-datepicker-title {
+  height: 50px;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  float: left;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-header .ui-datepicker-next {
+  float: right;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar {
+  width: 95%;
+  margin: 0 auto;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar thead tr th {
+  cursor: default;
+  height: 40px;
+  line-height: 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td {
+  line-height: 30px;
+  height: 30px;
+  font-size: 0.9em;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td:hover {
+  background-color: #b1dcfb;
+  border-radius: 3px;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day {
+  background-color: #0089ec;
+  border-radius: 3px;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td.ui-datepicker-current-day a {
+  color: #FFF;
+}
+.hmd-book-wrapper .hmd-datepicker .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable {
+  text-decoration: line-through;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.5);
+}
